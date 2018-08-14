@@ -8,17 +8,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home/home.component';
+
+// Feature Module import
+import { BookSearchModule } from './book-search/book-search.module';
+import { MovieSearchModule } from './movie-search/movie-search.module';
+
+// Routing Module import
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    AppRoutingModule,
+    BookSearchModule,
+    MovieSearchModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
